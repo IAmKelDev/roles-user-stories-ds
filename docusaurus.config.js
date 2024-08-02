@@ -43,6 +43,7 @@ const config = {
           sidebarPath: './sidebars.js',
 
           //Set up "Edit this page" option at the bottom of each page
+          //Available params given here: https://docusaurus.io/docs/next/api/plugins/@docusaurus/plugin-content-docs#EditUrlFunction
           editUrl: ({version, versionDocsDirPath, docPath}) => {
             if (version !== 'current') //Only allow page editing when on the "Next" (dev) version
             {

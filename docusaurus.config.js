@@ -41,8 +41,16 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl:
-            'https://github.com/IAmKelDev/roles-user-stories/tree/dev/',
+
+          //Set up "Edit this page" option at the bottom of each page
+          editUrl: ({version, versionDocsDirPath, docPath}) => {
+            if (version !== 'current') //Only allow page editing when on the "Next" (dev) version
+            {
+              return undefined;
+            }
+            return "https://github.com/IAmKelDev/roles-user-stories-ds/tree/dev/" + versionDocsDirPath + "/" + docPath;
+          },
+
           routeBasePath: '/'
         },
         theme: {

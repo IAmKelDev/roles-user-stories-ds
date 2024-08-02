@@ -49,7 +49,7 @@ jobs:
               # Grab only the non-"Next" docs from main
               # Uses "exclude" pathspec. See https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-exclude
             - name: Get versioned changes from main
-              run: git checkout main ":!docs/*" ":!sidebars.js"
+              run: git merge main
             
               # Grab only the "Next" version docs from dev
             - name: Get latest changes from dev
